@@ -3,12 +3,12 @@ from openpyxl import load_workbook
 import re
 
 # Papkaga yo'l:
-folder_path = r"K:\KPI\2023\01.07.2023\Rahbar bahosi iyun\papqa"
+folder_path = r"papkaga_manzil_kiriting" 
 
 # Almashtiorish (zmena) uchun:
 replace_values = {
-    r'may': r'iyun',
-    r'01.06.2023': r'01.07.2023',
+    r"o'zgaradigan matn": r"o'zgartiradigan matn",  # chapdagini o'ngdagiga o'zgartiradi. Padan yana qo'shib yozishingiz mumkin. Faqat vergul qo'yishni unutmang
+    #r'vahokazo': r'vahokazoo',
 }
 
 # Excel fayl obrabotka funksiyasi
