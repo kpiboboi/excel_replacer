@@ -9,5 +9,5 @@ Ushbu dastur siz ko'rsatgan papkadagi hattoki uning ichida papakalar bo'lsa ular
 
 ## Ishlatish uchun qo'llanma:
 *  `folder_path` dgan joyida papkani yo'lini ko'rsatish kere
-*  `replace_values` da r'<before>:r'<after>', va hk. bittan ko'p znachenie krtshz mumkn.
-  _bu yerda <before> zamenit qlinihshi kere bo'ladigan so'z, <after> o'zgartirishingiz kerak bo'lgan text_
+*  `replace_values` da r'[before]:r'[after]', va hk. bittan ko'p znachenie krtshz mumkn.
+  _bu yerda [before] zamenit qlinihshi kere bo'ladigan so'z, [after] o'zgartirishingiz kerak bo'lgan text_
