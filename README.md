@@ -5,7 +5,7 @@ Ushbu dastur siz ko'rsatgan papkadagi hattoki uning ichida papakalar bo'lsa ular
 
 ## Buning uchun quyidagilar bo'lishi kere:
 *  python3.10+ o'rnatilgan bo'lishi kere
-*  `pip install openpyxl` `pip install os` bilbiotekalari ustanovka qlngan bo'lishi kere.
+*  `pip install openpyxl` `pip install os` `pip install re` bilbiotekalari o'rnatilgan bo'lishi kere.
 
 ## Ishlatish uchun qo'llanma:
 *  `folder_path` dgan joyida papkani yo'lini ko'rsatish kere
