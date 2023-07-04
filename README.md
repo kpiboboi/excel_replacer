@@ -1,4 +1,4 @@
-# excel_replacer Ishlatish bo'yicha qo'llanma
+# excel_replacer.py Ishlatish bo'yicha qo'llanma
 
 ## Ushbu dastur nima qiladi?
 Ushbu dastur siz ko'rsatgan papkadagi hattoki uning ichida papakalar bo'lsa ulardagi `.xlsx` bilan tugaydigan fayllarni siz kiritgan matnga zamenit qberadi 
