@@ -36,7 +36,7 @@ else:
                 workbook.save(file_path)
                 print(f"Fayl muvafaqqiyatli o'zgartirildi 🟩 : {file_path}")
             except Exception as e:
-                print(f"Fayl obrabotkasida xatolik ❌🟥 : {file_path}. Sabab => : {str(e)}")
+                print(f"Fayl obrabotkasida xatolik❌❌❌ 🟥 : {file_path}. Sabab => : {str(e)}")
 
 
 # Rekursiv fayl va papkalardan o'tuvchi funksiya
