@@ -64,7 +64,7 @@ else:
 
 
         # tqdm orqali bilan qayta ishlash funksiyasini chaqirish
-        for file in tqdm(files, desc="FAYLLAR QAYTA ISHLASH JARAYONDA 🔁:"):
+        for file in tqdm(files, desc="FAYLLAR QAYTA ISHLASH JARAYONIDA 🔁:"):
             process_excel_file(file)
 
         # Logni chaqirish
