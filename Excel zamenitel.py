@@ -3,9 +3,9 @@ from openpyxl import load_workbook
 import re
 
 # Papkaga yo'l:
-folder_path = input("Iltimos, .xlsx fayllari joylashgan papka manzilini kiriting: ")
+folder_path = input("Iltimos, .xlsx fayllari joylashgan papka manzilini kiriting 📂: ")
 
-# Almashtirish:
+# Qiymatni almashtirish:
 replace_values = {}
 while True:
     key = input("O'zgartirilishi kerak bo'lgan matnini kiriting (tugatish uchun bo'sh qoldiring) 🔍: ")
@@ -15,10 +15,10 @@ while True:
     replace_values[key] = value
 
 if not replace_values:
-    print("O'zgartirish qiymatlari kiritilmadi. Skript yakunlandi 🥴")
+    print("O'zgartirish qiymatlari kiritilmadi. Skript yakunlandi")
 else:
-    confirmation = input("O'zgartirishni boshlash uchun [HA] ni, bekor qilish uchun [YO'Q] ni kiriting")
-    if confirmation.lower() == 'HA':
+    confirmation = input("O'zgartirishni boshlash uchun [ha] ni, bekor qilish uchun [yo'q] ni kiriting: ")
+    if confirmation.lower() == 'ha':
 
         # O'zgartirishlarni kuzatish uchun log
         log = []
@@ -44,13 +44,13 @@ else:
 
                 workbook.save(file_path)
                 if replacements > 0:
-                    log_entry = f"Файл успешно изменен 🟩: {file_path}\nКоличество замен в файле: {replacements}"
+                    log_entry = f"Fayl muvaffaqiyatli o'zgartirildi 🟩: {file_path}\nFayldagi almashtirishlar soni: {replacements} ta"
                     log.append(log_entry)
                 else:
-                    log_entry = f"Файл не изменен 🟨: {file_path}\nКоличество замен в файле: 0 ❌"
+                    log_entry = f"Fayl o'zgartirilmadi 🟨: {file_path}\nFayldagi almashtirishlar yo'q ❌"
                     log.append(log_entry)
             except Exception as e:
-                log_entry = f"Ошибка обработки файла 🟥: {file_path}. Причина => : {str(e)}"
+                log_entry = f"Faylni qayta ishlashda xatolik 🟥: {file_path}. Sabab => : {str(e)}"
                 log.append(log_entry)
 
         # Fayl va papkalarni qayta ishlash uchun rekursiv funksiya
@@ -91,4 +91,6 @@ else:
         print("            __| |                                          🟩🟩🟩🟩🟩🟩🟩 ")
         print("           (___/                                                             ")
     else:
-        print("Замена отменена :(")
+        print("🔺🔻🔺🔻🔺🔻🔺🔻  🔺🔻🔺🔻🔺🔻🔺🔻  🔺🔻🔺🔻🔺🔻🔺🔻")
+        print("♻️ O'zgartirish bekor qilindi. Belgilangan qiymatlar topilmadi 📌 ")
+        print("🔺🔻🔺🔻🔺🔻🔺🔻  🔺🔻🔺🔻🔺🔻🔺🔻  🔺🔻🔺🔻🔺🔻🔺🔻")
