@@ -3,6 +3,9 @@ from openpyxl import load_workbook
 import re
 from tqdm import tqdm
 
+# Log zapis fayl yaratish
+log_file = open("log.txt", "w", encoding="utf-8")
+
 # Papkaga yo'l:
 folder_path = input("Iltimos, .xlsx fayllari joylashgan papka manzilini kiriting 📂: ")
 
@@ -69,7 +72,13 @@ else:
 
         # Logni chaqirish
         for entry in log:
+            # Logni faylga yozvolamz
+            log_file.write(entry + "\n")
+            # Logni konsolga chiqaramiz
             print(entry)
+
+        # Log faylni yopamiz
+        log_file.close()
 
         print(" _______           _ _                                                       ")
         print("(_______)         | | |                                                      ")
