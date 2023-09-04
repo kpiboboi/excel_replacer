@@ -57,7 +57,11 @@ else:
 
         files = []
         for root, _, file_names in os.walk(folder_path):
-            files.extend([os.path.join(root, file_name) for file_name in file_names])
+            for file_name in file_names:
+                file_path = os.path.join(root, file_name)
+                if file_name.endswith('.xlsx'):
+                    files.append(file_path)
+
 
         # tqdm orqali bilan qayta ishlash funksiyasini chaqirish
         for file in tqdm(files, desc="FAYLLAR QAYTA ISHLASH JARAYONDA 🔁:"):
