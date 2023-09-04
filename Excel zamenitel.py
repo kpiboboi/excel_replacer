@@ -1,6 +1,7 @@
 import os
 from openpyxl import load_workbook
 import re
+from tqdm import tqdm
 
 # Papkaga yo'l:
 folder_path = input("Iltimos, .xlsx fayllari joylashgan papka manzilini kiriting 📂: ")
@@ -53,16 +54,14 @@ else:
                 log_entry = f"Faylni qayta ishlashda xatolik 🟥: {file_path}. Sabab => : {str(e)}"
                 log.append(log_entry)
 
-        # Fayl va papkalarni qayta ishlash uchun rekursiv funksiya
-        def process_folder(folder_path):
-            for root, dirs, files in os.walk(folder_path):
-                for file in files:
-                    if file.endswith('.xlsx'):
-                        file_path = os.path.join(root, file)
-                        process_excel_file(file_path)
 
-        # Papkani qayta obrabotka funksiyasini chaqirish
-        process_folder(folder_path)
+        files = []
+        for root, _, file_names in os.walk(folder_path):
+            files.extend([os.path.join(root, file_name) for file_name in file_names])
+
+        # tqdm orqali bilan qayta ishlash funksiyasini chaqirish
+        for file in tqdm(files, desc="FAYLLAR QAYTA ISHLASH JARAYONDA 🔁:"):
+            process_excel_file(file)
 
         # Logni chaqirish
         for entry in log:
