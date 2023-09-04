@@ -63,8 +63,8 @@ def main():
                 print(entry)
 
             log_file.close()
-            print("❇️ OPERATSIYA MUVAFAQQIYATLI YAKUNLANDI ❇️")
-            print(f"✅ Muvafaqqiyatli operatsiyalar soni: {success_count}")
+            print("✅✅✅ OPERATSIYA MUVAFAQQIYATLI YAKUNLANDI ✅✅✅")
+            print(f"❇️ Muvafaqqiyatli operatsiyalar soni: {success_count}")
             print(f"❌ Muvafaqqiyatsiz operatsiyalar soni: {fail_count}")
         else:
             print("⛔️ O'zgartirish bekor qilindi ⛔️")
