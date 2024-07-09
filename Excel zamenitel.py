@@ -12,7 +12,7 @@ def process_excel_file(file_path, replace_values):
             sheet = workbook[sheet_name]
             for row in sheet.iter_rows():
                 for cell in row:
-                    if cell.value is not None and isinstance(cell.value, str):  # Проверка на None и строку
+                    if cell.value is not None and isinstance(cell.value, str):
                         for pattern, replacement in replace_values.items():
                             replaced_text, count = re.subn(pattern, replacement, cell.value)
                             if count > 0:
