@@ -12,7 +12,7 @@ def process_excel_file(file_path, replace_values):
             sheet = workbook[sheet_name]
             for row in sheet.iter_rows():
                 for cell in row:
-                    if cell.value is not None and isinstance(cell.value, str):
+                    if cell.value is not None and isinstance(cell.value, str):  # Проверка на None и строку
                         for pattern, replacement in replace_values.items():
                             replaced_text, count = re.subn(pattern, replacement, cell.value)
                             if count > 0:
@@ -58,11 +58,15 @@ def main():
                 else:
                     fail_count += 1
 
-            for entry in log:
-                log_file.write(entry + "\n")
-                print(entry)
+            try:
+                for entry in log:
+                    log_file.write(entry + "\n")
+                    print(entry)
+            except Exception as e:
+                print(f"Log faylini saqlashda xatolik: {str(e)}")
+            finally:
+                log_file.close()
 
-            log_file.close()
             print("✅✅✅ OPERATSIYA MUVAFAQQIYATLI YAKUNLANDI ✅✅✅")
             print(f"❇️ Muvafaqqiyatli operatsiyalar soni: {success_count}")
             print(f"❌ Muvafaqqiyatsiz operatsiyalar soni: {fail_count}")
